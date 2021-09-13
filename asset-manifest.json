@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/coords-generator/static/css/main.bfa3cde0.chunk.css",
-    "main.js": "/coords-generator/static/js/main.2cb42a9e.chunk.js",
-    "main.js.map": "/coords-generator/static/js/main.2cb42a9e.chunk.js.map",
-    "runtime-main.js": "/coords-generator/static/js/runtime-main.95a2249c.js",
-    "runtime-main.js.map": "/coords-generator/static/js/runtime-main.95a2249c.js.map",
-    "static/js/2.29f72018.chunk.js": "/coords-generator/static/js/2.29f72018.chunk.js",
-    "static/js/2.29f72018.chunk.js.map": "/coords-generator/static/js/2.29f72018.chunk.js.map",
-    "static/js/3.8929b455.chunk.js": "/coords-generator/static/js/3.8929b455.chunk.js",
-    "static/js/3.8929b455.chunk.js.map": "/coords-generator/static/js/3.8929b455.chunk.js.map",
-    "index.html": "/coords-generator/index.html",
-    "static/css/main.bfa3cde0.chunk.css.map": "/coords-generator/static/css/main.bfa3cde0.chunk.css.map",
-    "static/js/2.29f72018.chunk.js.LICENSE.txt": "/coords-generator/static/js/2.29f72018.chunk.js.LICENSE.txt"
+    "main.css": "/generate-coords-try/static/css/main.bfa3cde0.chunk.css",
+    "main.js": "/generate-coords-try/static/js/main.2cb42a9e.chunk.js",
+    "main.js.map": "/generate-coords-try/static/js/main.2cb42a9e.chunk.js.map",
+    "runtime-main.js": "/generate-coords-try/static/js/runtime-main.217acea1.js",
+    "runtime-main.js.map": "/generate-coords-try/static/js/runtime-main.217acea1.js.map",
+    "static/js/2.29f72018.chunk.js": "/generate-coords-try/static/js/2.29f72018.chunk.js",
+    "static/js/2.29f72018.chunk.js.map": "/generate-coords-try/static/js/2.29f72018.chunk.js.map",
+    "static/js/3.8929b455.chunk.js": "/generate-coords-try/static/js/3.8929b455.chunk.js",
+    "static/js/3.8929b455.chunk.js.map": "/generate-coords-try/static/js/3.8929b455.chunk.js.map",
+    "index.html": "/generate-coords-try/index.html",
+    "static/css/main.bfa3cde0.chunk.css.map": "/generate-coords-try/static/css/main.bfa3cde0.chunk.css.map",
+    "static/js/2.29f72018.chunk.js.LICENSE.txt": "/generate-coords-try/static/js/2.29f72018.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.95a2249c.js",
+    "static/js/runtime-main.217acea1.js",
     "static/js/2.29f72018.chunk.js",
     "static/css/main.bfa3cde0.chunk.css",
     "static/js/main.2cb42a9e.chunk.js"
