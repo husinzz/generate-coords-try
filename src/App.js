@@ -99,7 +99,7 @@ function App() {
         }
       >
         {locations.map((current) => (
-          <div>{`{location: ${current.location}, lat : ${current.lat}, lng : ${current.lng}},`}</div>
+          <div>{`{"location": "${current.location}", "lat" : "${current.lat}", "lng" : "${current.lng}"},`}</div>
         ))}
       </div>
       <Footer />
