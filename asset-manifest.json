@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/generate-coords-try/static/css/main.e42d0e45.chunk.css",
-    "main.js": "/generate-coords-try/static/js/main.bdfe6611.chunk.js",
-    "main.js.map": "/generate-coords-try/static/js/main.bdfe6611.chunk.js.map",
+    "main.css": "/generate-coords-try/static/css/main.5fa0afc8.chunk.css",
+    "main.js": "/generate-coords-try/static/js/main.9c22b190.chunk.js",
+    "main.js.map": "/generate-coords-try/static/js/main.9c22b190.chunk.js.map",
     "runtime-main.js": "/generate-coords-try/static/js/runtime-main.217acea1.js",
     "runtime-main.js.map": "/generate-coords-try/static/js/runtime-main.217acea1.js.map",
     "static/js/2.29f72018.chunk.js": "/generate-coords-try/static/js/2.29f72018.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.8929b455.chunk.js": "/generate-coords-try/static/js/3.8929b455.chunk.js",
     "static/js/3.8929b455.chunk.js.map": "/generate-coords-try/static/js/3.8929b455.chunk.js.map",
     "index.html": "/generate-coords-try/index.html",
-    "static/css/main.e42d0e45.chunk.css.map": "/generate-coords-try/static/css/main.e42d0e45.chunk.css.map",
+    "static/css/main.5fa0afc8.chunk.css.map": "/generate-coords-try/static/css/main.5fa0afc8.chunk.css.map",
     "static/js/2.29f72018.chunk.js.LICENSE.txt": "/generate-coords-try/static/js/2.29f72018.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.217acea1.js",
     "static/js/2.29f72018.chunk.js",
-    "static/css/main.e42d0e45.chunk.css",
-    "static/js/main.bdfe6611.chunk.js"
+    "static/css/main.5fa0afc8.chunk.css",
+    "static/js/main.9c22b190.chunk.js"
   ]
 }
