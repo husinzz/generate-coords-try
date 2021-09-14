@@ -1,7 +1,7 @@
 {
   "name": "generate-coords-try",
   "version": "0.1.0",
-  "homepage": "https://apalah.tech/coords-generator",
+  "homepage": "https://apalah.tech/generate-coords-try",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
