@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 
 function App() {
@@ -21,14 +21,20 @@ function App() {
     if (!isNaN(lat) & !isNaN(lng)) {
       setCenter({
         coords: {
-          longitude: lng,
-          latitude: lat,
+          longitude: parseInt(lng,10),
+          latitude: parseInt(lat,10),
         },
       });
+      console.log(center)
+      setLoc(generateRandomPoints(center, radius, count));
     } else {
       alert("Enter Numbers");
     }
   }
+
+  useEffect(() => {
+    setLoc(generateRandomPoints(center, radius, count));
+  }, [center, radius, count]);
 
   return (
     <>
@@ -68,14 +74,6 @@ function App() {
           <button
             className="text-center bg-gray-300 p-2 rounded-lg"
             type="submit"
-            onClick={() => {
-              navigator.geolocation.getCurrentPosition((position) => {
-                setCenter(position);
-              });
-
-              setLoc(generateRandomPoints(center, radius, count));
-              console.log(locations);
-            }}
           >
             Submit
           </button>
@@ -85,10 +83,9 @@ function App() {
           onClick={() => {
             navigator.geolocation.getCurrentPosition((position) => {
               setCenter(position);
+              setLoc(generateRandomPoints(center, radius, count));
             });
-
-            setLoc(generateRandomPoints(center, radius, count));
-            console.log(locations);
+            console.log(locations + "by auto");
           }}
         >
           Or Press me for current location
