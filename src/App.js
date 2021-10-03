@@ -25,8 +25,6 @@ function App() {
           latitude: parseInt(lat,10),
         },
       });
-      console.log(center)
-      setLoc(generateRandomPoints(center, radius, count));
     } else {
       alert("Enter Numbers");
     }
@@ -83,9 +81,8 @@ function App() {
           onClick={() => {
             navigator.geolocation.getCurrentPosition((position) => {
               setCenter(position);
-              setLoc(generateRandomPoints(center, radius, count));
+              // setLoc(generateRandomPoints(center, radius, count))
             });
-            console.log(locations + "by auto");
           }}
         >
           Or Press me for current location
