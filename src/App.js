@@ -68,6 +68,14 @@ function App() {
           <button
             className="text-center bg-gray-300 p-2 rounded-lg"
             type="submit"
+            onClick={() => {
+              navigator.geolocation.getCurrentPosition((position) => {
+                setCenter(position);
+              });
+
+              setLoc(generateRandomPoints(center, radius, count));
+              console.log(locations);
+            }}
           >
             Submit
           </button>
@@ -122,12 +130,18 @@ function Navigation() {
 }
 
 function Footer() {
-  return(
+  return (
     <footer className="flex justify-center my-3">
-      <p>Created By : <a href="https://github.com/urdreamboi">urdreamboi</a></p> | 
-      <p>Coordinate Algorithm by : <a href="https://gist.github.com/mkhatib">mkhatib</a></p>
+      <p>
+        Created By : <a href="https://github.com/urdreamboi">urdreamboi</a>
+      </p>{" "}
+      |
+      <p>
+        Coordinate Algorithm by :{" "}
+        <a href="https://gist.github.com/mkhatib">mkhatib</a>
+      </p>
     </footer>
-  )
+  );
 }
 
 function generateRandomPoint(center, radius, increment) {
