@@ -21,8 +21,8 @@ function App() {
     if (!isNaN(lat) & !isNaN(lng)) {
       setCenter({
         coords: {
-          longitude: parseInt(lng,10),
-          latitude: parseInt(lat,10),
+          longitude: parseInt(lng, 10),
+          latitude: parseInt(lat, 10),
         },
       });
     } else {
@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     setLoc(generateRandomPoints(center, radius, count));
-  }, [center, radius, count]);
+  }, [center]);
 
   return (
     <>
@@ -76,17 +76,33 @@ function App() {
             Submit
           </button>
         </form>
-        <button
-          className="text-center mx-auto block p-2 rounded-lg bg-gray-600 text-white"
-          onClick={() => {
-            navigator.geolocation.getCurrentPosition((position) => {
-              setCenter(position);
-              // setLoc(generateRandomPoints(center, radius, count))
-            });
-          }}
-        >
-          Or Press me for current location
-        </button>
+        <div className="flex justify-center">
+          <div className="px-5">
+            <button
+              className="text-center mx-auto block p-2 rounded-lg bg-gray-600 text-white"
+              onClick={() => {
+                navigator.geolocation.getCurrentPosition((position) => {
+                  setCenter(position);
+                  // setLoc(generateRandomPoints(center, radius, count))
+                });
+              }}
+            >
+              Or Press me for current location
+            </button>
+          </div>
+          <div className="px-5">
+            <button
+              className="text-center mx-auto block p-2 rounded-lg bg-gray-600 text-white"
+              onClick={() => {
+                count > 9999
+                  ? alert("To Much")
+                  : setLoc(generateRandomPointsAllOver(count));
+              }}
+            >
+              Or Press me for locations everywhere
+            </button>
+          </div>
+        </div>
         <p className="text-center">
           {!center.coords.latitude
             ? ""
@@ -96,10 +112,23 @@ function App() {
 
       <div
         className={
-          `bg-gray-200 border-2 border-black container mx-auto` +
+          `bg-gray-200 border-2 border-black container mx-auto relative` +
           (locations.length === 0 ? " hidden" : "")
         }
       >
+        {locations ? (
+          <button
+            className="top-2 right-3 absolute border-2 border-black p-2 rounded-lg bg-white font-bold"
+            onClick={() => {
+              navigator.clipboard.writeText(JSON.stringify(locations));
+              alert("copied");
+            }}
+          >
+            Copy Data
+          </button>
+        ) : (
+          ""
+        )}
         {locations.map((current) => (
           <div>{`{"location": "${current.location}", "lat" : "${current.lat}", "lng" : "${current.lng}"},`}</div>
         ))}
@@ -162,6 +191,22 @@ function generateRandomPoints(center, radius, count) {
   var points = [];
   for (var i = 0; i < count; i++) {
     points.push(generateRandomPoint(center, radius, i));
+  }
+  return points;
+}
+
+function generateRandomPointAllOver(increment) {
+  var x0 = Math.random() * (80 - -180) + -180;
+  var y0 = Math.random() * (90 - -90) + -90;
+
+  return { location: `Location ${increment}`, lat: y0, lng: x0 };
+}
+
+function generateRandomPointsAllOver(count) {
+  var points = [];
+  for (var i = 0; i < count; i++) {
+    points.push(generateRandomPointAllOver(i));
+    console.log("cool");
   }
   return points;
 }
